@@ -1,0 +1,1 @@
+rootProject.name = "netology-jc-m2-t3"
