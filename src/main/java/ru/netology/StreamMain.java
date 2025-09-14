@@ -1,0 +1,20 @@
+package ru.netology;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+
+public class StreamMain {
+    public static void main(String[] args) {
+        List<Integer> intList = Arrays.asList(1, 2, 5, 16, -1, -2, 0, 32, 3, 5, 8, 23, 4);
+
+        System.out.println("Исходный список: " + intList);
+        System.out.println("Обработка с Stream API:");
+
+        intList.stream()
+                .filter(x -> x > 0)
+                .filter(x -> x % 2 == 0)
+                .sorted(Comparator.naturalOrder())
+                .forEach(System.out::println);
+    }
+}
